@@ -10,18 +10,24 @@ LevelDB RPC is an XML-RPC based interface for LevelDB.
 ## Getting Started
 
 Currently, only following methods are supported:
-* 'put'
-* 'get'
-* 'delete'
+* `put`
+* `get`
+* `delete`
 
-### start an XMl-RPC server
+### start an XML-RPC server
+  ```
   $ python leveldb-server.py
-
+  ```
+  
 You can also specify port number or data directory:
 
+  ```
   $ python leveldb-server.py --port=8080 --datadir=testdir
+  ```
+  
+### start an XML-RPC client
 
-### start an XMl-RPC client
+  ```
   $ python leveldb-client.py
   localhost:8000> get foo
   localhost:8000> put foo bar
@@ -30,8 +36,10 @@ You can also specify port number or data directory:
   localhost:8000> delete foo
   localhost:8000> <CTRL-D>
   $ 
-
+  ```
+  
 You can also specify hostname or port number:
 
+  ```
   $ python leveldb-client.py --host=hostname --port=8080
-
+  ```
